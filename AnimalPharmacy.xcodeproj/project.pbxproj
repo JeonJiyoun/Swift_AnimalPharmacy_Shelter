@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1726B56F9068DED2574896DD /* Pods_AnimalPharmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8B2EFD6004F50B500DC1DF /* Pods_AnimalPharmacy.framework */; };
+		2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A7725EF24F4AC2100D5F80A /* apimage.jpg */; };
+		2A7725F424F5E05900D5F80A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F324F5E05900D5F80A /* CollectionViewController.swift */; };
+		2A7725F624F5E51500D5F80A /* ShelterAnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */; };
+		2A7725F824F637EB00D5F80A /* tabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */; };
+		2AAE46B624EF9FA3002F1E74 /* AnimalPharmacyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */; };
+		2AAE46BC24EFBF7B002F1E74 /* PharmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */; };
+		2AAE46BE24EFCC2E002F1E74 /* APData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BD24EFCC2E002F1E74 /* APData.swift */; };
+		2ACB323824F3918800E949FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB323724F3918800E949FE /* MapViewController.swift */; };
+		2AE4E1FA24ED01C300633FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */; };
+		2AE4E1FC24ED01C300633FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */; };
+		2AE4E1FE24ED01C300633FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E1FD24ED01C300633FA8 /* ViewController.swift */; };
+		2AE4E20124ED01C300633FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE4E1FF24ED01C300633FA8 /* Main.storyboard */; };
+		2AE4E20324ED01C900633FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE4E20224ED01C900633FA8 /* Assets.xcassets */; };
+		2AE4E20624ED01C900633FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */; };
+		2AE4E21124ED01C900633FA8 /* AnimalPharmacyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E21024ED01C900633FA8 /* AnimalPharmacyTests.swift */; };
+		2AE4E21C24ED01C900633FA8 /* AnimalPharmacyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E21B24ED01C900633FA8 /* AnimalPharmacyUITests.swift */; };
+		C479EE1B593571BCA2E9AA0E /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4A750C3C3C7CF3751EBE90 /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework */; };
+		FFB09D951DE2FF2AD6928D55 /* Pods_AnimalPharmacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8321327955E9CDE188C0F1 /* Pods_AnimalPharmacyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AE4E20D24ED01C900633FA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE4E1EE24ED01C300633FA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE4E1F524ED01C300633FA8;
+			remoteInfo = AnimalPharmacy;
+		};
+		2AE4E21824ED01C900633FA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE4E1EE24ED01C300633FA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE4E1F524ED01C300633FA8;
+			remoteInfo = AnimalPharmacy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C167077A8438E8EBCB039A1 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C67F60606D32D7FD591A133 /* Pods-AnimalPharmacyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacyTests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacyTests/Pods-AnimalPharmacyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		20EE0995602E42CC54404826 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A4A750C3C3C7CF3751EBE90 /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalPharmacy_AnimalPharmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7725EF24F4AC2100D5F80A /* apimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apimage.jpg; sourceTree = "<group>"; };
+		2A7725F324F5E05900D5F80A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterAnimalModel.swift; sourceTree = "<group>"; };
+		2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabCollectionViewCell.swift; sourceTree = "<group>"; };
+		2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPharmacyModel.swift; sourceTree = "<group>"; };
+		2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmTableViewCell.swift; sourceTree = "<group>"; };
+		2AAE46BD24EFCC2E002F1E74 /* APData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APData.swift; sourceTree = "<group>"; };
+		2ACB323724F3918800E949FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2AE4E1F624ED01C300633FA8 /* AnimalPharmacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalPharmacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2AE4E1FD24ED01C300633FA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AE4E20024ED01C300633FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AE4E20224ED01C900633FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AE4E20524ED01C900633FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2AE4E20724ED01C900633FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE4E20C24ED01C900633FA8 /* AnimalPharmacyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalPharmacyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE4E21024ED01C900633FA8 /* AnimalPharmacyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPharmacyTests.swift; sourceTree = "<group>"; };
+		2AE4E21224ED01C900633FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE4E21724ED01C900633FA8 /* AnimalPharmacyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalPharmacyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE4E21B24ED01C900633FA8 /* AnimalPharmacyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPharmacyUITests.swift; sourceTree = "<group>"; };
+		2AE4E21D24ED01C900633FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8B2EFD6004F50B500DC1DF /* Pods_AnimalPharmacy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalPharmacy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8321327955E9CDE188C0F1 /* Pods_AnimalPharmacyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalPharmacyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C078F637EF5E63AEA489DC8 /* Pods-AnimalPharmacyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacyTests.release.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacyTests/Pods-AnimalPharmacyTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B8FA24C6C8475BDE2E5705F /* Pods-AnimalPharmacy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy.release.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy/Pods-AnimalPharmacy.release.xcconfig"; sourceTree = "<group>"; };
+		EE78324C061285CA2A8D7350 /* Pods-AnimalPharmacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy.debug.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy/Pods-AnimalPharmacy.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AE4E1F324ED01C300633FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1726B56F9068DED2574896DD /* Pods_AnimalPharmacy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E20924ED01C900633FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB09D951DE2FF2AD6928D55 /* Pods_AnimalPharmacyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E21424ED01C900633FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C479EE1B593571BCA2E9AA0E /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AAE46B424EF9F68002F1E74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */,
+				2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AE4E1ED24ED01C300633FA8 = {
+			isa = PBXGroup;
+			children = (
+				2AE4E1F824ED01C300633FA8 /* AnimalPharmacy */,
+				2AE4E20F24ED01C900633FA8 /* AnimalPharmacyTests */,
+				2AE4E21A24ED01C900633FA8 /* AnimalPharmacyUITests */,
+				2AE4E1F724ED01C300633FA8 /* Products */,
+				5118CCCBC4D89592291FC615 /* Pods */,
+				42173DC3EEF1168BA76FD446 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2AE4E1F724ED01C300633FA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AE4E1F624ED01C300633FA8 /* AnimalPharmacy.app */,
+				2AE4E20C24ED01C900633FA8 /* AnimalPharmacyTests.xctest */,
+				2AE4E21724ED01C900633FA8 /* AnimalPharmacyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AE4E1F824ED01C300633FA8 /* AnimalPharmacy */ = {
+			isa = PBXGroup;
+			children = (
+				2A7725EF24F4AC2100D5F80A /* apimage.jpg */,
+				2AAE46B424EF9F68002F1E74 /* Model */,
+				2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */,
+				2A7725F324F5E05900D5F80A /* CollectionViewController.swift */,
+				2AAE46BD24EFCC2E002F1E74 /* APData.swift */,
+				2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */,
+				2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */,
+				2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */,
+				2ACB323724F3918800E949FE /* MapViewController.swift */,
+				2AE4E1FD24ED01C300633FA8 /* ViewController.swift */,
+				2AE4E1FF24ED01C300633FA8 /* Main.storyboard */,
+				2AE4E20224ED01C900633FA8 /* Assets.xcassets */,
+				2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */,
+				2AE4E20724ED01C900633FA8 /* Info.plist */,
+			);
+			path = AnimalPharmacy;
+			sourceTree = "<group>";
+		};
+		2AE4E20F24ED01C900633FA8 /* AnimalPharmacyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AE4E21024ED01C900633FA8 /* AnimalPharmacyTests.swift */,
+				2AE4E21224ED01C900633FA8 /* Info.plist */,
+			);
+			path = AnimalPharmacyTests;
+			sourceTree = "<group>";
+		};
+		2AE4E21A24ED01C900633FA8 /* AnimalPharmacyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2AE4E21B24ED01C900633FA8 /* AnimalPharmacyUITests.swift */,
+				2AE4E21D24ED01C900633FA8 /* Info.plist */,
+			);
+			path = AnimalPharmacyUITests;
+			sourceTree = "<group>";
+		};
+		42173DC3EEF1168BA76FD446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B2EFD6004F50B500DC1DF /* Pods_AnimalPharmacy.framework */,
+				2A4A750C3C3C7CF3751EBE90 /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework */,
+				4C8321327955E9CDE188C0F1 /* Pods_AnimalPharmacyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5118CCCBC4D89592291FC615 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE78324C061285CA2A8D7350 /* Pods-AnimalPharmacy.debug.xcconfig */,
+				9B8FA24C6C8475BDE2E5705F /* Pods-AnimalPharmacy.release.xcconfig */,
+				20EE0995602E42CC54404826 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig */,
+				1C167077A8438E8EBCB039A1 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig */,
+				1C67F60606D32D7FD591A133 /* Pods-AnimalPharmacyTests.debug.xcconfig */,
+				6C078F637EF5E63AEA489DC8 /* Pods-AnimalPharmacyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AE4E1F524ED01C300633FA8 /* AnimalPharmacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE4E22024ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacy" */;
+			buildPhases = (
+				AD12914708EF60BEBCCB81B5 /* [CP] Check Pods Manifest.lock */,
+				2AE4E1F224ED01C300633FA8 /* Sources */,
+				2AE4E1F324ED01C300633FA8 /* Frameworks */,
+				2AE4E1F424ED01C300633FA8 /* Resources */,
+				17CB86AA8779AC9C93D3C7F3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalPharmacy;
+			productName = AnimalPharmacy;
+			productReference = 2AE4E1F624ED01C300633FA8 /* AnimalPharmacy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2AE4E20B24ED01C900633FA8 /* AnimalPharmacyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE4E22324ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacyTests" */;
+			buildPhases = (
+				31F3196BBDFA1B782B9C6523 /* [CP] Check Pods Manifest.lock */,
+				2AE4E20824ED01C900633FA8 /* Sources */,
+				2AE4E20924ED01C900633FA8 /* Frameworks */,
+				2AE4E20A24ED01C900633FA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE4E20E24ED01C900633FA8 /* PBXTargetDependency */,
+			);
+			name = AnimalPharmacyTests;
+			productName = AnimalPharmacyTests;
+			productReference = 2AE4E20C24ED01C900633FA8 /* AnimalPharmacyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2AE4E21624ED01C900633FA8 /* AnimalPharmacyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE4E22624ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacyUITests" */;
+			buildPhases = (
+				1A79E31A81354072B1CE9FC0 /* [CP] Check Pods Manifest.lock */,
+				2AE4E21324ED01C900633FA8 /* Sources */,
+				2AE4E21424ED01C900633FA8 /* Frameworks */,
+				2AE4E21524ED01C900633FA8 /* Resources */,
+				2C36FD0E2EF4C94A549562BA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AE4E21924ED01C900633FA8 /* PBXTargetDependency */,
+			);
+			name = AnimalPharmacyUITests;
+			productName = AnimalPharmacyUITests;
+			productReference = 2AE4E21724ED01C900633FA8 /* AnimalPharmacyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AE4E1EE24ED01C300633FA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = 60080254;
+				TargetAttributes = {
+					2AE4E1F524ED01C300633FA8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2AE4E20B24ED01C900633FA8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2AE4E1F524ED01C300633FA8;
+					};
+					2AE4E21624ED01C900633FA8 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2AE4E1F524ED01C300633FA8;
+					};
+				};
+			};
+			buildConfigurationList = 2AE4E1F124ED01C300633FA8 /* Build configuration list for PBXProject "AnimalPharmacy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2AE4E1ED24ED01C300633FA8;
+			productRefGroup = 2AE4E1F724ED01C300633FA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AE4E1F524ED01C300633FA8 /* AnimalPharmacy */,
+				2AE4E20B24ED01C900633FA8 /* AnimalPharmacyTests */,
+				2AE4E21624ED01C900633FA8 /* AnimalPharmacyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AE4E1F424ED01C300633FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE4E20624ED01C900633FA8 /* LaunchScreen.storyboard in Resources */,
+				2AE4E20324ED01C900633FA8 /* Assets.xcassets in Resources */,
+				2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */,
+				2AE4E20124ED01C300633FA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E20A24ED01C900633FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E21524ED01C900633FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17CB86AA8779AC9C93D3C7F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy/Pods-AnimalPharmacy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy/Pods-AnimalPharmacy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy/Pods-AnimalPharmacy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A79E31A81354072B1CE9FC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalPharmacy-AnimalPharmacyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C36FD0E2EF4C94A549562BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31F3196BBDFA1B782B9C6523 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalPharmacyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD12914708EF60BEBCCB81B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalPharmacy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AE4E1F224ED01C300633FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7725F424F5E05900D5F80A /* CollectionViewController.swift in Sources */,
+				2AE4E1FE24ED01C300633FA8 /* ViewController.swift in Sources */,
+				2AAE46BC24EFBF7B002F1E74 /* PharmTableViewCell.swift in Sources */,
+				2AAE46BE24EFCC2E002F1E74 /* APData.swift in Sources */,
+				2A7725F624F5E51500D5F80A /* ShelterAnimalModel.swift in Sources */,
+				2AE4E1FA24ED01C300633FA8 /* AppDelegate.swift in Sources */,
+				2AAE46B624EF9FA3002F1E74 /* AnimalPharmacyModel.swift in Sources */,
+				2AE4E1FC24ED01C300633FA8 /* SceneDelegate.swift in Sources */,
+				2A7725F824F637EB00D5F80A /* tabCollectionViewCell.swift in Sources */,
+				2ACB323824F3918800E949FE /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E20824ED01C900633FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE4E21124ED01C900633FA8 /* AnimalPharmacyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AE4E21324ED01C900633FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE4E21C24ED01C900633FA8 /* AnimalPharmacyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AE4E20E24ED01C900633FA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE4E1F524ED01C300633FA8 /* AnimalPharmacy */;
+			targetProxy = 2AE4E20D24ED01C900633FA8 /* PBXContainerItemProxy */;
+		};
+		2AE4E21924ED01C900633FA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE4E1F524ED01C300633FA8 /* AnimalPharmacy */;
+			targetProxy = 2AE4E21824ED01C900633FA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AE4E1FF24ED01C300633FA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE4E20024ED01C300633FA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE4E20524ED01C900633FA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AE4E21E24ED01C900633FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2AE4E21F24ED01C900633FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AE4E22124ED01C900633FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE78324C061285CA2A8D7350 /* Pods-AnimalPharmacy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2AE4E22224ED01C900633FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8FA24C6C8475BDE2E5705F /* Pods-AnimalPharmacy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2AE4E22424ED01C900633FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C67F60606D32D7FD591A133 /* Pods-AnimalPharmacyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalPharmacy.app/AnimalPharmacy";
+			};
+			name = Debug;
+		};
+		2AE4E22524ED01C900633FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C078F637EF5E63AEA489DC8 /* Pods-AnimalPharmacyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalPharmacy.app/AnimalPharmacy";
+			};
+			name = Release;
+		};
+		2AE4E22724ED01C900633FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20EE0995602E42CC54404826 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalPharmacy;
+			};
+			name = Debug;
+		};
+		2AE4E22824ED01C900633FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C167077A8438E8EBCB039A1 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AnimalPharmacyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youn.AnimalPharmacyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalPharmacy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AE4E1F124ED01C300633FA8 /* Build configuration list for PBXProject "AnimalPharmacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE4E21E24ED01C900633FA8 /* Debug */,
+				2AE4E21F24ED01C900633FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AE4E22024ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE4E22124ED01C900633FA8 /* Debug */,
+				2AE4E22224ED01C900633FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AE4E22324ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE4E22424ED01C900633FA8 /* Debug */,
+				2AE4E22524ED01C900633FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AE4E22624ED01C900633FA8 /* Build configuration list for PBXNativeTarget "AnimalPharmacyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AE4E22724ED01C900633FA8 /* Debug */,
+				2AE4E22824ED01C900633FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AE4E1EE24ED01C300633FA8 /* Project object */;
+}
