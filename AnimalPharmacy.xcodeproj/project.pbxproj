@@ -107,10 +107,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A7725F924F6427500D5F80A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */,
+				2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2A7725FA24F6429600D5F80A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ACB323724F3918800E949FE /* MapViewController.swift */,
+				2AE4E1FD24ED01C300633FA8 /* ViewController.swift */,
+				2A7725F324F5E05900D5F80A /* CollectionViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2AAE46B424EF9F68002F1E74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */,
+				2AAE46BD24EFCC2E002F1E74 /* APData.swift */,
 				2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */,
 			);
 			path = Model;
@@ -142,15 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				2A7725EF24F4AC2100D5F80A /* apimage.jpg */,
+				2A7725F924F6427500D5F80A /* Cells */,
 				2AAE46B424EF9F68002F1E74 /* Model */,
 				2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */,
-				2A7725F324F5E05900D5F80A /* CollectionViewController.swift */,
-				2AAE46BD24EFCC2E002F1E74 /* APData.swift */,
-				2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */,
+				2A7725FA24F6429600D5F80A /* Views */,
 				2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */,
-				2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */,
-				2ACB323724F3918800E949FE /* MapViewController.swift */,
-				2AE4E1FD24ED01C300633FA8 /* ViewController.swift */,
 				2AE4E1FF24ED01C300633FA8 /* Main.storyboard */,
 				2AE4E20224ED01C900633FA8 /* Assets.xcassets */,
 				2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */,

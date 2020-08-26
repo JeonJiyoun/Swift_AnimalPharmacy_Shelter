@@ -9,5 +9,7 @@
 import UIKit
 
 class tabCollectionViewCell: UICollectionViewCell {
+    let reuseID = "tabCell"
+    
     
 }

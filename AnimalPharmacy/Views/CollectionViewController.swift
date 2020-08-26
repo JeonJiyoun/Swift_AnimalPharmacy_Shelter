@@ -11,7 +11,9 @@ import Alamofire
 import SwiftyXMLParser
 private let reuseIdentifier = "collectionCell"
 
-class CollectionViewController: UICollectionViewController, XMLParserDelegate {
+class CollectionViewController: UIViewController, XMLParserDelegate {
+    
+    @IBOutlet weak var collectionVeiw: UICollectionView!
     
     func getURL(_ params:[String: Any]) -> URL {
         let key = "GV9oF1kJ7TEhlXW311QqGaE3tPHLqFVU7YClXVzc%2F9qo%2FtZtJo4giGpu39Sya2cX6ir%2Fc1qjge1H249PFvAsew%3D%3D"
@@ -46,7 +48,7 @@ class CollectionViewController: UICollectionViewController, XMLParserDelegate {
         // self.clearsSelectionOnViewWillAppear = false
         self.requestData()
         
-        self.collectionView.reloadData()
+       // self.collectionView.reloadData()
         
         // Do any additional setup after loading the view.
         
@@ -66,22 +68,22 @@ class CollectionViewController: UICollectionViewController, XMLParserDelegate {
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 32
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        // Configure the cell
-        return cell
-    }
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
+//
+//
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return 32
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//        // Configure the cell
+//        return cell
+//    }
     
     // MARK: UICollectionViewDelegate
     
