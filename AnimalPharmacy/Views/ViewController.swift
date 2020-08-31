@@ -67,8 +67,6 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row, "row!")
-        print(pharmacy[indexPath.row], "data")
         performSegue(withIdentifier: "showMap", sender: pharmacy[indexPath.row])
     }
     

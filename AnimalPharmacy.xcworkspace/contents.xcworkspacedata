@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../Downloads/cities.json">
+   </FileRef>
+   <FileRef
       location = "group:AnimalPharmacy.xcodeproj">
    </FileRef>
    <FileRef

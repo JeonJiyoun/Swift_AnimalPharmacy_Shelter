@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1726B56F9068DED2574896DD /* Pods_AnimalPharmacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8B2EFD6004F50B500DC1DF /* Pods_AnimalPharmacy.framework */; };
+		2A00428C24F7821100FAF95E /* ShelterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00428B24F7821100FAF95E /* ShelterCollectionViewCell.swift */; };
+		2A00428E24F7894200FAF95E /* ProtectedAnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A00428D24F7894200FAF95E /* ProtectedAnimalCell.xib */; };
+		2A25501B24F8DF93008A6926 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25501924F8DF93008A6926 /* AnimalTableViewCell.swift */; };
+		2A25501C24F8DF93008A6926 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25501A24F8DF93008A6926 /* AnimalTableViewCell.xib */; };
+		2A4D0EBF24F7A6F300B337F3 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D0EBE24F7A6F300B337F3 /* cities.json */; };
+		2A4D0EC324F7AAA100B337F3 /* generated.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D0EC224F7AAA100B337F3 /* generated.json */; };
 		2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A7725EF24F4AC2100D5F80A /* apimage.jpg */; };
 		2A7725F424F5E05900D5F80A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F324F5E05900D5F80A /* CollectionViewController.swift */; };
 		2A7725F624F5E51500D5F80A /* ShelterAnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */; };
-		2A7725F824F637EB00D5F80A /* tabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */; };
+		2A7F439324FC89D900977C99 /* animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F439224FC89D900977C99 /* animal.png */; };
 		2AAE46B624EF9FA3002F1E74 /* AnimalPharmacyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */; };
 		2AAE46BC24EFBF7B002F1E74 /* PharmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */; };
 		2AAE46BE24EFCC2E002F1E74 /* APData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BD24EFCC2E002F1E74 /* APData.swift */; };
+		2AC9700824F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9700724F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift */; };
 		2ACB323824F3918800E949FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB323724F3918800E949FE /* MapViewController.swift */; };
 		2AE4E1FA24ED01C300633FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */; };
 		2AE4E1FC24ED01C300633FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */; };
@@ -49,14 +56,22 @@
 		1C167077A8438E8EBCB039A1 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1C67F60606D32D7FD591A133 /* Pods-AnimalPharmacyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacyTests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacyTests/Pods-AnimalPharmacyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20EE0995602E42CC54404826 /* Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalPharmacy-AnimalPharmacyUITests/Pods-AnimalPharmacy-AnimalPharmacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A00428B24F7821100FAF95E /* ShelterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterCollectionViewCell.swift; sourceTree = "<group>"; };
+		2A00428D24F7894200FAF95E /* ProtectedAnimalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtectedAnimalCell.xib; sourceTree = "<group>"; };
+		2A25501924F8DF93008A6926 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		2A25501A24F8DF93008A6926 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		2A4A750C3C3C7CF3751EBE90 /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalPharmacy_AnimalPharmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4D0EBE24F7A6F300B337F3 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = ../../../../Downloads/cities.json; sourceTree = "<group>"; };
+		2A4D0EC224F7AAA100B337F3 /* generated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = generated.json; path = ../../../Downloads/generated.json; sourceTree = "<group>"; };
 		2A7725EF24F4AC2100D5F80A /* apimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apimage.jpg; sourceTree = "<group>"; };
 		2A7725F324F5E05900D5F80A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterAnimalModel.swift; sourceTree = "<group>"; };
-		2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabCollectionViewCell.swift; sourceTree = "<group>"; };
+		2A7F439224FC89D900977C99 /* animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = animal.png; path = ../../../../Downloads/animal.png; sourceTree = "<group>"; };
+		2A7F439424FC89DE00977C99 /* animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal.png; sourceTree = "<group>"; };
 		2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPharmacyModel.swift; sourceTree = "<group>"; };
 		2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmTableViewCell.swift; sourceTree = "<group>"; };
 		2AAE46BD24EFCC2E002F1E74 /* APData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APData.swift; sourceTree = "<group>"; };
+		2AC9700724F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedAnimalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2ACB323724F3918800E949FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AE4E1F624ED01C300633FA8 /* AnimalPharmacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalPharmacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,8 +125,11 @@
 		2A7725F924F6427500D5F80A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2A7725F724F637EB00D5F80A /* tabCollectionViewCell.swift */,
 				2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */,
+				2AC9700724F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift */,
+				2A00428B24F7821100FAF95E /* ShelterCollectionViewCell.swift */,
+				2A25501924F8DF93008A6926 /* AnimalTableViewCell.swift */,
+				2A7F439224FC89D900977C99 /* animal.png */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 				2ACB323724F3918800E949FE /* MapViewController.swift */,
 				2AE4E1FD24ED01C300633FA8 /* ViewController.swift */,
 				2A7725F324F5E05900D5F80A /* CollectionViewController.swift */,
+				2A4D0EBE24F7A6F300B337F3 /* cities.json */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +153,15 @@
 				2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2AC45B7924F76A98003B4EFA /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				2A25501A24F8DF93008A6926 /* AnimalTableViewCell.xib */,
+				2A00428D24F7894200FAF95E /* ProtectedAnimalCell.xib */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 		2AE4E1ED24ED01C300633FA8 = {
@@ -162,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				2A7725EF24F4AC2100D5F80A /* apimage.jpg */,
+				2A7F439424FC89DE00977C99 /* animal.png */,
+				2AC45B7924F76A98003B4EFA /* Nibs */,
 				2A7725F924F6427500D5F80A /* Cells */,
 				2AAE46B424EF9F68002F1E74 /* Model */,
 				2AE4E1F924ED01C300633FA8 /* AppDelegate.swift */,
@@ -169,6 +199,7 @@
 				2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */,
 				2AE4E1FF24ED01C300633FA8 /* Main.storyboard */,
 				2AE4E20224ED01C900633FA8 /* Assets.xcassets */,
+				2A4D0EC224F7AAA100B337F3 /* generated.json */,
 				2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */,
 				2AE4E20724ED01C900633FA8 /* Info.plist */,
 			);
@@ -325,8 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4D0EBF24F7A6F300B337F3 /* cities.json in Resources */,
 				2AE4E20624ED01C900633FA8 /* LaunchScreen.storyboard in Resources */,
+				2A4D0EC324F7AAA100B337F3 /* generated.json in Resources */,
+				2A00428E24F7894200FAF95E /* ProtectedAnimalCell.xib in Resources */,
 				2AE4E20324ED01C900633FA8 /* Assets.xcassets in Resources */,
+				2A7F439324FC89D900977C99 /* animal.png in Resources */,
+				2A25501C24F8DF93008A6926 /* AnimalTableViewCell.xib in Resources */,
 				2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */,
 				2AE4E20124ED01C300633FA8 /* Main.storyboard in Resources */,
 			);
@@ -456,15 +492,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC9700824F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift in Sources */,
+				2A00428C24F7821100FAF95E /* ShelterCollectionViewCell.swift in Sources */,
 				2A7725F424F5E05900D5F80A /* CollectionViewController.swift in Sources */,
 				2AE4E1FE24ED01C300633FA8 /* ViewController.swift in Sources */,
 				2AAE46BC24EFBF7B002F1E74 /* PharmTableViewCell.swift in Sources */,
+				2A25501B24F8DF93008A6926 /* AnimalTableViewCell.swift in Sources */,
 				2AAE46BE24EFCC2E002F1E74 /* APData.swift in Sources */,
 				2A7725F624F5E51500D5F80A /* ShelterAnimalModel.swift in Sources */,
 				2AE4E1FA24ED01C300633FA8 /* AppDelegate.swift in Sources */,
 				2AAE46B624EF9FA3002F1E74 /* AnimalPharmacyModel.swift in Sources */,
 				2AE4E1FC24ED01C300633FA8 /* SceneDelegate.swift in Sources */,
-				2A7725F824F637EB00D5F80A /* tabCollectionViewCell.swift in Sources */,
 				2ACB323824F3918800E949FE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

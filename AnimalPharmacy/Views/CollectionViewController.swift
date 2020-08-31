@@ -7,114 +7,121 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyXMLParser
+
 private let reuseIdentifier = "collectionCell"
 
 class CollectionViewController: UIViewController, XMLParserDelegate {
-    
-    @IBOutlet weak var collectionVeiw: UICollectionView!
-    
-    func getURL(_ params:[String: Any]) -> URL {
-        let key = "GV9oF1kJ7TEhlXW311QqGaE3tPHLqFVU7YClXVzc%2F9qo%2FtZtJo4giGpu39Sya2cX6ir%2Fc1qjge1H249PFvAsew%3D%3D"
-        let baseURL = "http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/abandonmentPublic"
-        
-        let urlParams = params.compactMap({ (key, value) -> String in
-            return "\(key)=\(value)"
-        }).joined(separator: "&")
-        
-        let withURL = baseURL + "?\(urlParams)"
-        let encoded = withURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! + "&serviceKey=" + key
-        return URL(string:encoded)!
-    }
-    
-    func requestData(_ params:[String: Any] = [:]) {
-        let url = getURL(params)
-        AF.request(url, method: .get).responseData {response in
-            if let data = response.data {
-                let xml = XML.parse(data)
-                print(xml.response.body.items.item[0].age.text)
-                
-            }}
-        
-        
-    }
-    
+    @IBOutlet var tabPageView: UIView!
+    @IBOutlet weak var pageCollectionView: UICollectionView!
+    @IBOutlet weak var firstTab: UIButton!
+    @IBOutlet weak var secondTab: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*초기 세팅*/
+        firstTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        secondTab.setTitleColor(.lightGray, for: .normal)
+        
+        pageCollectionView.register(UINib(nibName: "ProtectedAnimalCell", bundle: nil), forCellWithReuseIdentifier: "protectedAnimalCell")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        self.requestData()
+//        self.requestData()
         
-       // self.collectionView.reloadData()
+        // self.collectionView.reloadData()
         
         // Do any additional setup after loading the view.
         
     }
     
+    @IBAction func tabFirst(_ sender: Any) {
+        firstTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        secondTab.setTitleColor(.lightGray, for: .normal)
+        pageCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0) as IndexPath, at: .left, animated: true)
+    }
     
+    @IBAction func tabSecond(_ sender: Any) {
+        secondTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        firstTab.setTitleColor(.lightGray, for: .normal)
+        pageCollectionView.scrollToItem(at: IndexPath(item: 0, section: 1) as IndexPath, at: .left, animated: true)
+        
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    // MARK: UICollectionViewDataSource
-    
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-//
-//
-//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of items
-//        return 32
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//        // Configure the cell
-//        return cell
-//    }
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
     
 }
+
+extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 0 {
+            let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "protectedAnimalCell", for: indexPath) as! ProtectedAnimalCollectionViewCell
+            return cell
+            
+        }
+        else {
+            let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "shelterCell", for: indexPath) as! ShelterCollectionViewCell
+            cell.backgroundColor = .orange
+            return cell
+        }
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: tabPageView.frame.width , height: pageCollectionView.frame.height)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let x = targetContentOffset.pointee.x
+        if x > 0 {
+            tabSecond([])
+        }
+        else {
+            tabFirst([])
+        }
+    }
+    
+}
+
+/*
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+ return true
+ }
+ */
+
+/*
+ // Uncomment this method to specify if the specified item should be selected
+ override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+ return true
+ }
+ */
+
+/*
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+ return false
+ }
+ 
+ override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+ return false
+ }
+ 
+ override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+ 
+ }
+ */
+
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="protectedAnimalCell" id="IgU-0t-uD4" customClass="ProtectedAnimalCollectionViewCell" customModule="AnimalPharmacy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="471"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0g0-Tf-Qux">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="471"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1f-5o-l5y">
+                        <rect key="frame" x="0.0" y="0.0" width="459" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시/ 시군구/ 품종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-It-fkz">
+                                <rect key="frame" x="20" y="9.5" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-qk-Png">
+                                <rect key="frame" x="391" y="5" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="setSearchFilter:" destination="IgU-0t-uD4" eventType="touchUpInside" id="nxb-Ew-vMh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VOg-It-fkz" firstAttribute="centerY" secondItem="K1f-5o-l5y" secondAttribute="centerY" id="JXb-sT-wys"/>
+                            <constraint firstItem="VOg-It-fkz" firstAttribute="leading" secondItem="K1f-5o-l5y" secondAttribute="leading" constant="20" id="Xtv-Se-4tZ"/>
+                            <constraint firstAttribute="trailing" secondItem="2uO-qk-Png" secondAttribute="trailing" constant="20" id="Z8C-I5-Ym7"/>
+                            <constraint firstItem="2uO-qk-Png" firstAttribute="centerY" secondItem="K1f-5o-l5y" secondAttribute="centerY" id="ia5-v0-JSd"/>
+                            <constraint firstAttribute="height" constant="40" id="tzj-xZ-cZ1"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WeV-Wg-lmj">
+                        <rect key="frame" x="0.0" y="40" width="459" height="431"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="IgU-0t-uD4" id="gtc-dR-jYT"/>
+                            <outlet property="delegate" destination="IgU-0t-uD4" id="aFM-Vs-paP"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WeV-Wg-lmj" secondAttribute="bottom" id="Cyc-Nt-Vgz"/>
+                    <constraint firstItem="WeV-Wg-lmj" firstAttribute="leading" secondItem="0g0-Tf-Qux" secondAttribute="leading" id="a14-iM-OP1"/>
+                    <constraint firstItem="K1f-5o-l5y" firstAttribute="top" secondItem="0g0-Tf-Qux" secondAttribute="top" id="cVp-ST-Gcf"/>
+                    <constraint firstItem="K1f-5o-l5y" firstAttribute="leading" secondItem="0g0-Tf-Qux" secondAttribute="leading" id="d0C-SK-mgT"/>
+                    <constraint firstAttribute="trailing" secondItem="K1f-5o-l5y" secondAttribute="trailing" id="pNQ-hF-gnQ"/>
+                    <constraint firstItem="WeV-Wg-lmj" firstAttribute="top" secondItem="K1f-5o-l5y" secondAttribute="bottom" id="rmm-oc-ICL"/>
+                    <constraint firstAttribute="trailing" secondItem="WeV-Wg-lmj" secondAttribute="trailing" id="vRj-o4-VjQ"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="459" height="471"/>
+            <connections>
+                <outlet property="dataTableView" destination="WeV-Wg-lmj" id="bWj-dZ-DWd"/>
+                <outlet property="filter" destination="VOg-It-fkz" id="Fe8-3A-fDJ"/>
+                <outlet property="searchBar" destination="K1f-5o-l5y" id="Y3G-Y8-CaK"/>
+            </connections>
+            <point key="canvasLocation" x="-206.52173913043481" y="131.58482142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
