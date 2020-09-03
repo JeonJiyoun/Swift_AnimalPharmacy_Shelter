@@ -20,7 +20,7 @@ class CollectionViewController: UIViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         /*초기 세팅*/
-        firstTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        firstTab.setTitleColor(#colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1), for: .normal)
         secondTab.setTitleColor(.lightGray, for: .normal)
         
         pageCollectionView.register(UINib(nibName: "ProtectedAnimalCell", bundle: nil), forCellWithReuseIdentifier: "protectedAnimalCell")
@@ -31,13 +31,13 @@ class CollectionViewController: UIViewController, XMLParserDelegate {
     
     
     @IBAction func tabFirst(_ sender: Any) {
-        firstTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        firstTab.setTitleColor(#colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1), for: .normal)
         secondTab.setTitleColor(.lightGray, for: .normal)
         pageCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0) as IndexPath, at: .left, animated: true)
     }
     
     @IBAction func tabSecond(_ sender: Any) {
-        secondTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
+        secondTab.setTitleColor(#colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1), for: .normal)
         firstTab.setTitleColor(.lightGray, for: .normal)
         pageCollectionView.scrollToItem(at: IndexPath(item: 0, section: 1) as IndexPath, at: .left, animated: true)
         
