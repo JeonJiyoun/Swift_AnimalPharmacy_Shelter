@@ -25,8 +25,9 @@ class CollectionViewController: UIViewController, XMLParserDelegate {
         
         pageCollectionView.register(UINib(nibName: "ProtectedAnimalCell", bundle: nil), forCellWithReuseIdentifier: "protectedAnimalCell")
         pageCollectionView.register(UINib(nibName: "AnimalPharmacyCell", bundle: nil), forCellWithReuseIdentifier: "pharmacyPageCell")
-    
         
+        pageCollectionView.allowsSelection = false
+    
     }
     
     
@@ -71,14 +72,17 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: tabPageView.frame.width , height: pageCollectionView.frame.height)
         
     }
+
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+        print(indexPath.row,"///")
     }
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x

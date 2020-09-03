@@ -59,6 +59,14 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         dataTableView.refreshControl?.addTarget(self, action: #selector(pullToRefresh(_:)), for: .valueChanged)
     }
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let hitView = super.hitTest(point, with: event)
+       
+        if hitView == self {
+            print("//")
+        }
+        return hitView
+    }
     
     func getURL(_ params:[String: Any]) -> URL {
         let key = "GV9oF1kJ7TEhlXW311QqGaE3tPHLqFVU7YClXVzc%2F9qo%2FtZtJo4giGpu39Sya2cX6ir%2Fc1qjge1H249PFvAsew%3D%3D"
@@ -140,7 +148,7 @@ extension ProtectedAnimalCollectionViewCell: UITableViewDelegate, UITableViewDat
             //사이즈 같게 할 거니까 갱신할 필요 없음!
         }
         tableCell.setCell(animal: target)
-        
+
         /*셀 마지막으로 가면 데이터 더 받아오기*/
         if indexPath.row == animalData.count - 1 && hasMoreData{
             pageNo += 1
@@ -154,6 +162,7 @@ extension ProtectedAnimalCollectionViewCell: UITableViewDelegate, UITableViewDat
         let detailVC = storyboard.instantiateViewController(withIdentifier: "AnimalDetail") as! AnimalDetailViewController
         let target = animalData[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
 
         detailVC.ageData = target.age
         detailVC.sexData = target.sexCd
@@ -200,6 +209,10 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
         }
         else if component == 1{
             let selected = pickerView.selectedRow(inComponent: 0)
+            guard siguns[selected].count > row else {
+                title.text = siguns[selected][0]
+                return title
+            }
             title.text = siguns[selected][row]
         }
         else {
@@ -226,13 +239,22 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
         let selected0 = pickerView.selectedRow(inComponent: 0)
         let selected1 = pickerView.selectedRow(inComponent: 1)
         let selected2 = pickerView.selectedRow(inComponent: 2)
+        var gungu = ""
         
         if component == 0 {
             pickerView.reloadComponent(1)
         }
-        filter.text = "\(cities[selected0])\t\t \(siguns[selected0][selected1])\t\t \(type[selected2])"
+        if siguns[selected0].count > selected1 {
+            gungu = siguns[selected0][selected1]
+            valIndex[1] = selected1
+        }
+        else {
+            gungu = siguns[selected0][0]
+            valIndex[1] = 0
+        }
+    
+        filter.text = "\(cities[selected0])\t\t \(gungu)\t\t \(type[selected2])"
         valIndex[0] = selected0
-        valIndex[1] = selected1
         valIndex[2] = selected2
     }
     

@@ -131,7 +131,7 @@
                                     <constraint firstItem="isu-xQ-BeI" firstAttribute="width" secondItem="PBW-h5-JcG" secondAttribute="width" id="jng-DF-YjT"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IRk-Yr-vxv">
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IRk-Yr-vxv">
                                 <rect key="frame" x="0.0" y="148" width="375" height="630"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="u1u-9s-4sQ">

@@ -59,6 +59,7 @@ extension PharmacyCollectionViewCell: UITableViewDelegate {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mapVC = storyboard.instantiateViewController(withIdentifier: "pharmacyDetail") as! MapViewController
         let target = pharmacy[indexPath.row]
+        pharmacyTableView.deselectRow(at: indexPath, animated: true)
         mapVC.fullAddr = target.location
         mapVC.lat = Double(target.latitude) ?? 128.0
         mapVC.log = Double(target.longtude) ?? 35.0
