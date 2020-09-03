@@ -239,11 +239,14 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
         let selected0 = pickerView.selectedRow(inComponent: 0)
         let selected1 = pickerView.selectedRow(inComponent: 1)
         let selected2 = pickerView.selectedRow(inComponent: 2)
+        
         var gungu = ""
         
         if component == 0 {
             pickerView.reloadComponent(1)
+            pickerView.selectRow(0, inComponent: 1, animated: false)
         }
+        print(siguns[selected0].count, selected1)
         if siguns[selected0].count > selected1 {
             gungu = siguns[selected0][selected1]
             valIndex[1] = selected1
