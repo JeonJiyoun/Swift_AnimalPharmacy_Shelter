@@ -24,16 +24,11 @@ class CollectionViewController: UIViewController, XMLParserDelegate {
         secondTab.setTitleColor(.lightGray, for: .normal)
         
         pageCollectionView.register(UINib(nibName: "ProtectedAnimalCell", bundle: nil), forCellWithReuseIdentifier: "protectedAnimalCell")
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-//        self.requestData()
-        
-        // self.collectionView.reloadData()
-        
-        // Do any additional setup after loading the view.
+        pageCollectionView.register(UINib(nibName: "AnimalPharmacyCell", bundle: nil), forCellWithReuseIdentifier: "pharmacyPageCell")
+    
         
     }
+    
     
     @IBAction func tabFirst(_ sender: Any) {
         firstTab.setTitleColor(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1), for: .normal)
@@ -62,12 +57,14 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "protectedAnimalCell", for: indexPath) as! ProtectedAnimalCollectionViewCell
+            cell.navigationController = self.navigationController
             return cell
             
         }
         else {
-            let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "shelterCell", for: indexPath) as! ShelterCollectionViewCell
+            let cell = pageCollectionView.dequeueReusableCell(withReuseIdentifier: "pharmacyPageCell", for: indexPath) as! PharmacyCollectionViewCell
             cell.backgroundColor = .orange
+            cell.navigationController = self.navigationController
             return cell
         }
         

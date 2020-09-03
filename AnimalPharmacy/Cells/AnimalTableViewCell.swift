@@ -13,6 +13,9 @@ class AnimalTableViewCell: UITableViewCell {
   
     @IBOutlet weak var kindCd: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
+    @IBOutlet weak var colorCd: UILabel!
+    @IBOutlet weak var happenDt: UILabel!
+    @IBOutlet weak var happenPlace: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +31,8 @@ class AnimalTableViewCell: UITableViewCell {
     
     func setCell(animal:ShelterAnimalModel){
         kindCd.text = animal.kindCd
+        colorCd.text = animal.colorCd
+        happenDt.text = animal.happenDt
+        happenPlace.text = animal.happenPlace
     }
 }

@@ -18,7 +18,7 @@ class PharmTableViewCell: UITableViewCell {
     
     func display(pharmacy:APData){
         pharmacyToDisplay = pharmacy
-        
+ 
         name.text = pharmacyToDisplay!.name
         sigun.text = pharmacyToDisplay!.sigunName
         telNo.text = pharmacyToDisplay!.telNo

@@ -36,8 +36,10 @@ class ShelterAnimalModel {
     let weight: String
     let kindCd: String
     let specialMark: String
+    let sexCd: String
+    let noticeNo: String
     
-    init(age: String, careAddr: String, careTel: String, careNm: String, colorCd: String, photo: String, happenDt: String, happenPlace: String, neuterYn: String, weight: String, kindCd: String, specialMark: String) {
+    init(age: String, careAddr: String, careTel: String, careNm: String, colorCd: String, photo: String, happenDt: String, happenPlace: String, neuterYn: String, weight: String, kindCd: String, specialMark: String, sexCd: String, noticeNo: String) {
         self.age = age
         self.careAddr = careAddr
         self.careTel = careTel
@@ -50,6 +52,8 @@ class ShelterAnimalModel {
         self.weight = weight
         self.kindCd = kindCd
         self.specialMark = specialMark
+        self.sexCd = sexCd
+        self.noticeNo = noticeNo
     }
     
 }

@@ -15,8 +15,9 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var searchBar: UIView!
     @IBOutlet weak var filter: UILabel!
     @IBOutlet weak var dataTableView: UITableView!
+    weak var navigationController: UINavigationController?
     
-    var valIndex = [0, 0, 0]
+    var valIndex = [0, 2, 0]
     var animalData = [ShelterAnimalModel]()
     
     let cities = ["서울특별시", "부산광역시", "대구광역시", "인천광역시", "광주광역시", "대전광역시", "울산광역시"]
@@ -42,16 +43,23 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         
         pickerRect.origin.x = 0
         pickerRect.origin.y = 40
+        pickerRect.size.width = UIScreen.main.bounds.width
         pickerView.frame = pickerRect
         pickerView.delegate = self
         pickerView.selectRow(2, inComponent: 1, animated: false)
-        pickerView.backgroundColor = .black
+        pickerView.backgroundColor = .white
         pickerView.isHidden = true
         self.addSubview(pickerView)
         
         dataTableView.register(UINib(nibName: "AnimalTableViewCell", bundle: nil), forCellReuseIdentifier: "animalTableCell")
-        requestData(["upr_cd":cities_val[0], "org_cd": siguns_val[0][2], "upkind": type_val[0], "pageNo": pageNo])
+        requestData(["upr_cd":cities_val[valIndex[0]], "org_cd": siguns_val[valIndex[0]][valIndex[1]], "upkind": type_val[valIndex[2]]])
+        
+        /*당겨서 새로고침*/
+        dataTableView.refreshControl = UIRefreshControl()
+        dataTableView.refreshControl?.addTarget(self, action: #selector(pullToRefresh(_:)), for: .valueChanged)
     }
+    
+    
     func getURL(_ params:[String: Any]) -> URL {
         let key = "GV9oF1kJ7TEhlXW311QqGaE3tPHLqFVU7YClXVzc%2F9qo%2FtZtJo4giGpu39Sya2cX6ir%2Fc1qjge1H249PFvAsew%3D%3D"
         let baseURL = "http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/abandonmentPublic"
@@ -65,6 +73,7 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         return URL(string:encoded)!
     }
     
+    
     func requestData(_ params:[String: Any] = [:], isNewSearch:Bool = true) {
         let url = getURL(params)
         if isNewSearch{
@@ -76,18 +85,20 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         AF.request(url, method: .get).responseData {response in
             if let data = response.data {
                 let xml = XML.parse(data)
-                print(xml.response.body.totalCount.double, xml.response.body.pageNo.double, self.pageNo, self.hasMoreData)
+                
                 for item in xml.response.body.items.item {
-                    self.animalData.append(ShelterAnimalModel(age: item.age.text ?? "2020년생", careAddr: item.careAddr.text ?? "보호소 주소", careTel: item.careTel.text ?? "보호소전화번호", careNm: item.careNm.text ?? "보호소", colorCd: item.colorCd.text ?? "애기 색", photo: item.filename.text ?? "nil", happenDt: item.happenDt.text ?? "발견 날짜", happenPlace: item.happenPlace.text ?? "발견된 장소", neuterYn: item.neuterYn.text ?? "중성화여부", weight: item.weight.text ?? "애기 무게", kindCd: item.kindCd.text ?? "품종", specialMark: item.specialMark.text ?? "특징"))
+                    self.animalData.append(ShelterAnimalModel(age: item.age.text ?? "2020년생", careAddr: item.careAddr.text ?? "보호소 주소", careTel: item.careTel.text ?? "보호소전화번호", careNm: item.careNm.text ?? "보호소", colorCd: item.colorCd.text ?? "애기 색", photo: item.filename.text ?? "nil", happenDt: item.happenDt.text ?? "발견 날짜", happenPlace: item.happenPlace.text ?? "발견된 장소", neuterYn: item.neuterYn.text ?? "중성화여부", weight: item.weight.text ?? "애기 무게", kindCd: item.kindCd.text ?? "품종", specialMark: item.specialMark.text ?? "특징", sexCd: item.sexCd.text ?? "성별", noticeNo: item.noticeNo.text ?? "공고번호"))
                 }
-                print(ceil((xml.response.body.totalCount.double ?? 10.0) / (xml.response.body.numOfRows.double ?? 10.0)))
+                
                 if ceil((xml.response.body.totalCount.double ?? 10.0) / (xml.response.body.numOfRows.double ?? 10.0)) <= Double(self.pageNo){
                     self.hasMoreData = false
                 }
+                //                print(self.animalData.count, "relaod before")
                 self.dataTableView.reloadData()
             }
             
         }
+        //        print("after reload")
     }
     
     @IBAction func setSearchFilter(_ sender: Any) {
@@ -100,6 +111,18 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         pickerView.isHidden = !pickerView.isHidden
     }
     
+    @objc func pullToRefresh(_ sender: Any) {
+        DispatchQueue.global().async {
+            self.requestData(["upr_cd":self.cities_val[self.valIndex[0]], "org_cd": self.siguns_val[self.valIndex[0]][self.valIndex[1]], "upkind": self.type_val[self.valIndex[2]]])
+            
+            DispatchQueue.main.async {
+                self.dataTableView.reloadData()
+                self.dataTableView.refreshControl?.endRefreshing()
+                
+            }
+        }
+        //        requestData(["upr_cd":cities_val[valIndex[0]], "org_cd": siguns_val[valIndex[0]][valIndex[1]], "upkind": type_val[valIndex[2]]])
+    }
     
 }
 
@@ -112,8 +135,9 @@ extension ProtectedAnimalCollectionViewCell: UITableViewDelegate, UITableViewDat
         let tableCell = dataTableView.dequeueReusableCell(withIdentifier: "animalTableCell", for: indexPath) as! AnimalTableViewCell
         let target = animalData[indexPath.row]
         let placeholder: UIImage? = UIImage.init(named: "animal.png")
+        
         tableCell.animalImage.imageFromURL(urlString: target.photo, placeholder: placeholder) {
-           //사이즈 같게 할 거니까 갱신할 필요 없음!
+            //사이즈 같게 할 거니까 갱신할 필요 없음!
         }
         tableCell.setCell(animal: target)
         
@@ -123,6 +147,27 @@ extension ProtectedAnimalCollectionViewCell: UITableViewDelegate, UITableViewDat
             requestData(["upr_cd":cities_val[valIndex[0]], "org_cd": siguns_val[valIndex[0]][valIndex[1]], "upkind": type_val[valIndex[2]], "pageNo": pageNo], isNewSearch: false)            
         }
         return tableCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "AnimalDetail") as! AnimalDetailViewController
+        let target = animalData[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
+
+        detailVC.ageData = target.age
+        detailVC.sexData = target.sexCd
+        detailVC.kindCdData = target.kindCd
+        detailVC.weightData = target.weight
+        detailVC.happenPlaceData = target.happenPlace
+        detailVC.happenDtData = target.happenDt
+        detailVC.careAddrData = target.careAddr
+        detailVC.noticeNoData = target.noticeNo
+        detailVC.careTelData = target.careTel
+        detailVC.neutrData = target.neuterYn
+        detailVC.urlData = target.photo
+        detailVC.specialMarkData = target.specialMark
+        
     }
     
     
@@ -144,18 +189,38 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
             return 2
         }
     }
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let title = UILabel()
+        title.textColor = #colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1)
+        title.textAlignment = .center
+        title.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.semibold)
         if component == 0{
-            return NSAttributedString(string: cities[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            title.text = cities[row]
         }
         else if component == 1{
             let selected = pickerView.selectedRow(inComponent: 0)
-            return NSAttributedString(string: siguns[selected][row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            title.text = siguns[selected][row]
         }
         else {
-            return NSAttributedString(string: type[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            title.text = type[row]
         }
+        return title
     }
+    
+    /*스트링 & 하나의 속성만 설정해줄때*/
+//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        if component == 0{
+//            return NSAttributedString(string: cities[row], attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1)])
+//        }
+//        else if component == 1{
+//            let selected = pickerView.selectedRow(inComponent: 0)
+//            return NSAttributedString(string: siguns[selected][row], attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1)])
+//        }
+//        else {
+//            return NSAttributedString(string: type[row], attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2394758165, green: 0.6759230494, blue: 0.8100400567, alpha: 1)])
+//        }
+//    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selected0 = pickerView.selectedRow(inComponent: 0)
@@ -175,9 +240,9 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
 }
 extension UIImageView {
     public func imageFromURL(urlString: String, placeholder: UIImage?, completion: @escaping () -> ()) {
-        if self.image == nil {
-            self.image = placeholder
-        }
+        
+        self.image = placeholder
+        
         URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
             if error != nil {
                 print(error)
