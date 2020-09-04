@@ -245,23 +245,23 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
         if component == 0 {
             pickerView.reloadComponent(1)
             pickerView.selectRow(0, inComponent: 1, animated: false)
-        }
-        print(siguns[selected0].count, selected1)
-        if siguns[selected0].count > selected1 {
-            gungu = siguns[selected0][selected1]
-            valIndex[1] = selected1
-        }
-        else {
             gungu = siguns[selected0][0]
             valIndex[1] = 0
         }
-    
+        if component == 1 {
+            if siguns[selected0].count > selected1 {
+                gungu = siguns[selected0][selected1]
+                valIndex[1] = selected1
+            }
+            else {
+                gungu = siguns[selected0][0]
+                valIndex[1] = 0
+            }
+        }
         filter.text = "\(cities[selected0])\t\t \(gungu)\t\t \(type[selected2])"
         valIndex[0] = selected0
         valIndex[2] = selected2
     }
-    
-    
 }
 extension UIImageView {
     public func imageFromURL(urlString: String, placeholder: UIImage?, completion: @escaping () -> ()) {
