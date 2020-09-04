@@ -59,14 +59,6 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
         dataTableView.refreshControl?.addTarget(self, action: #selector(pullToRefresh(_:)), for: .valueChanged)
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        let hitView = super.hitTest(point, with: event)
-       
-        if hitView == self {
-            print("//")
-        }
-        return hitView
-    }
     
     func getURL(_ params:[String: Any]) -> URL {
         let key = "GV9oF1kJ7TEhlXW311QqGaE3tPHLqFVU7YClXVzc%2F9qo%2FtZtJo4giGpu39Sya2cX6ir%2Fc1qjge1H249PFvAsew%3D%3D"
@@ -129,7 +121,7 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
                 
             }
         }
-        //        requestData(["upr_cd":cities_val[valIndex[0]], "org_cd": siguns_val[valIndex[0]][valIndex[1]], "upkind": type_val[valIndex[2]]])
+//                requestData(["upr_cd":cities_val[valIndex[0]], "org_cd": siguns_val[valIndex[0]][valIndex[1]], "upkind": type_val[valIndex[2]]])
     }
     
 }
