@@ -210,7 +210,6 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
         else if component == 1{
             let selected = pickerView.selectedRow(inComponent: 0)
             guard siguns[selected].count > row else {
-                title.text = siguns[selected][0]
                 return title
             }
             title.text = siguns[selected][row]
