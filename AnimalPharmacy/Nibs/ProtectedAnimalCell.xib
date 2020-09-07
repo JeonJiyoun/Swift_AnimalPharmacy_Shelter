@@ -19,12 +19,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1f-5o-l5y">
                         <rect key="frame" x="0.0" y="0.0" width="459" height="40"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시/ 시군구/ 품종" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-It-fkz">
-                                <rect key="frame" x="20" y="9.5" width="130.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9x-vY-QjL">
+                                <rect key="frame" x="20" y="3" width="121" height="34"/>
+                                <state key="normal" title="도시/시군구/품종">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPickerView:" destination="IgU-0t-uD4" eventType="touchUpInside" id="CkP-Gm-Jdb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-qk-Png">
                                 <rect key="frame" x="384" y="5" width="55" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
@@ -38,8 +41,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.39852416054165574" green="0.7099135453180766" blue="0.83728585025380708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="VOg-It-fkz" firstAttribute="centerY" secondItem="K1f-5o-l5y" secondAttribute="centerY" id="JXb-sT-wys"/>
-                            <constraint firstItem="VOg-It-fkz" firstAttribute="leading" secondItem="K1f-5o-l5y" secondAttribute="leading" constant="20" id="Xtv-Se-4tZ"/>
+                            <constraint firstItem="C9x-vY-QjL" firstAttribute="leading" secondItem="K1f-5o-l5y" secondAttribute="leading" constant="20" id="CqY-uQ-74K"/>
+                            <constraint firstItem="C9x-vY-QjL" firstAttribute="centerY" secondItem="K1f-5o-l5y" secondAttribute="centerY" id="PqF-SI-CYE"/>
                             <constraint firstAttribute="trailing" secondItem="2uO-qk-Png" secondAttribute="trailing" constant="20" id="Z8C-I5-Ym7"/>
                             <constraint firstItem="2uO-qk-Png" firstAttribute="centerY" secondItem="K1f-5o-l5y" secondAttribute="centerY" id="ia5-v0-JSd"/>
                             <constraint firstAttribute="height" constant="40" id="tzj-xZ-cZ1"/>
@@ -67,7 +70,7 @@
             <size key="customSize" width="459" height="471"/>
             <connections>
                 <outlet property="dataTableView" destination="WeV-Wg-lmj" id="bWj-dZ-DWd"/>
-                <outlet property="filter" destination="VOg-It-fkz" id="Fe8-3A-fDJ"/>
+                <outlet property="filter" destination="C9x-vY-QjL" id="whg-Xb-FA6"/>
                 <outlet property="searchBar" destination="K1f-5o-l5y" id="Y3G-Y8-CaK"/>
             </connections>
             <point key="canvasLocation" x="-206.52173913043481" y="131.58482142857142"/>

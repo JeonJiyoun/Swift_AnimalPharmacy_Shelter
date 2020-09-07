@@ -13,7 +13,7 @@ import SwiftyXMLParser
 class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var searchBar: UIView!
-    @IBOutlet weak var filter: UILabel!
+    @IBOutlet weak var filter: UIButton!
     @IBOutlet weak var dataTableView: UITableView!
     weak var navigationController: UINavigationController?
     
@@ -34,12 +34,9 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let tapRound = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         var pickerRect = pickerView.frame
-        
-        filter.isUserInteractionEnabled = true
-        filter.addGestureRecognizer(tapRound)
-        filter.text = "서울특별시\t\t강남구\t\t개"
+
+        filter.setTitle("서울특별시\t\t강남구\t\t개", for: .normal)
         
         pickerRect.origin.x = 0
         pickerRect.origin.y = 40
@@ -93,12 +90,10 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
                 if ceil((xml.response.body.totalCount.double ?? 10.0) / (xml.response.body.numOfRows.double ?? 10.0)) <= Double(self.pageNo){
                     self.hasMoreData = false
                 }
-                //                print(self.animalData.count, "relaod before")
                 self.dataTableView.reloadData()
             }
             
         }
-        //        print("after reload")
     }
     
     @IBAction func setSearchFilter(_ sender: Any) {
@@ -107,10 +102,10 @@ class ProtectedAnimalCollectionViewCell: UICollectionViewCell {
     }
     
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil){
+    @IBAction func showPickerView(_ sender: Any) {
         pickerView.isHidden = !pickerView.isHidden
     }
-    
+  
     @objc func pullToRefresh(_ sender: Any) {
         DispatchQueue.global().async {
             self.requestData(["upr_cd":self.cities_val[self.valIndex[0]], "org_cd": self.siguns_val[self.valIndex[0]][self.valIndex[1]], "upkind": self.type_val[self.valIndex[2]]])
@@ -239,7 +234,7 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
             gungu = siguns[selected0][0]
             valIndex[1] = 0
         }
-        if component == 1 {
+        else {
             if siguns[selected0].count > selected1 {
                 gungu = siguns[selected0][selected1]
                 valIndex[1] = selected1
@@ -249,7 +244,8 @@ extension ProtectedAnimalCollectionViewCell: UIPickerViewDelegate, UIPickerViewD
                 valIndex[1] = 0
             }
         }
-        filter.text = "\(cities[selected0])\t\t \(gungu)\t\t \(type[selected2])"
+
+        filter.setTitle("\(cities[selected0])\t\t\(gungu)\t\t\(type[selected2])", for: .normal)
         valIndex[0] = selected0
         valIndex[2] = selected2
     }

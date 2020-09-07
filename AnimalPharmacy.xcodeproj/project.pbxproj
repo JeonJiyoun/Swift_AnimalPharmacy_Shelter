@@ -14,14 +14,13 @@
 		2A25501C24F8DF93008A6926 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25501A24F8DF93008A6926 /* AnimalTableViewCell.xib */; };
 		2A27D09624FF7A5200735E2B /* AnimalPharmacyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A27D09524FF7A5200735E2B /* AnimalPharmacyCell.xib */; };
 		2A27D09824FF7AE300735E2B /* PharmacyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A27D09724FF7AE300735E2B /* PharmacyTableViewCell.xib */; };
-		2A4D0EC324F7AAA100B337F3 /* generated.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D0EC224F7AAA100B337F3 /* generated.json */; };
 		2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A7725EF24F4AC2100D5F80A /* apimage.jpg */; };
 		2A7725F424F5E05900D5F80A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F324F5E05900D5F80A /* CollectionViewController.swift */; };
 		2A7725F624F5E51500D5F80A /* ShelterAnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */; };
-		2A7F439324FC89D900977C99 /* animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F439224FC89D900977C99 /* animal.png */; };
 		2AAE46B624EF9FA3002F1E74 /* AnimalPharmacyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */; };
 		2AAE46BC24EFBF7B002F1E74 /* PharmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */; };
 		2AAE46BE24EFCC2E002F1E74 /* APData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE46BD24EFCC2E002F1E74 /* APData.swift */; };
+		2ABDBBB02505CC3800C24730 /* animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F439424FC89DE00977C99 /* animal.png */; };
 		2AC9700824F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9700724F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift */; };
 		2ACB323824F3918800E949FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB323724F3918800E949FE /* MapViewController.swift */; };
 		2ADD860B24FE0BAC00D23DF1 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD860924FE0BAC00D23DF1 /* AnimalDetailViewController.swift */; };
@@ -65,11 +64,9 @@
 		2A27D09524FF7A5200735E2B /* AnimalPharmacyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalPharmacyCell.xib; sourceTree = "<group>"; };
 		2A27D09724FF7AE300735E2B /* PharmacyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PharmacyTableViewCell.xib; sourceTree = "<group>"; };
 		2A4A750C3C3C7CF3751EBE90 /* Pods_AnimalPharmacy_AnimalPharmacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalPharmacy_AnimalPharmacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A4D0EC224F7AAA100B337F3 /* generated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = generated.json; path = ../../../Downloads/generated.json; sourceTree = "<group>"; };
 		2A7725EF24F4AC2100D5F80A /* apimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apimage.jpg; sourceTree = "<group>"; };
 		2A7725F324F5E05900D5F80A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		2A7725F524F5E51500D5F80A /* ShelterAnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterAnimalModel.swift; sourceTree = "<group>"; };
-		2A7F439224FC89D900977C99 /* animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = animal.png; path = ../../../../Downloads/animal.png; sourceTree = "<group>"; };
 		2A7F439424FC89DE00977C99 /* animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal.png; sourceTree = "<group>"; };
 		2AAE46B524EF9FA3002F1E74 /* AnimalPharmacyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPharmacyModel.swift; sourceTree = "<group>"; };
 		2AAE46BB24EFBF7B002F1E74 /* PharmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,7 +130,6 @@
 				2AC9700724F6465F00B1D6A9 /* ProtectedAnimalCollectionViewCell.swift */,
 				2A00428B24F7821100FAF95E /* PharmacyCollectionViewCell.swift */,
 				2A25501924F8DF93008A6926 /* AnimalTableViewCell.swift */,
-				2A7F439224FC89D900977C99 /* animal.png */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -205,7 +201,6 @@
 				2AE4E1FB24ED01C300633FA8 /* SceneDelegate.swift */,
 				2AE4E1FF24ED01C300633FA8 /* Main.storyboard */,
 				2AE4E20224ED01C900633FA8 /* Assets.xcassets */,
-				2A4D0EC224F7AAA100B337F3 /* generated.json */,
 				2AE4E20424ED01C900633FA8 /* LaunchScreen.storyboard */,
 				2AE4E20724ED01C900633FA8 /* Info.plist */,
 			);
@@ -363,12 +358,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4E20624ED01C900633FA8 /* LaunchScreen.storyboard in Resources */,
-				2A4D0EC324F7AAA100B337F3 /* generated.json in Resources */,
 				2A00428E24F7894200FAF95E /* ProtectedAnimalCell.xib in Resources */,
 				2AE4E20324ED01C900633FA8 /* Assets.xcassets in Resources */,
 				2A27D09624FF7A5200735E2B /* AnimalPharmacyCell.xib in Resources */,
-				2A7F439324FC89D900977C99 /* animal.png in Resources */,
 				2A27D09824FF7AE300735E2B /* PharmacyTableViewCell.xib in Resources */,
+				2ABDBBB02505CC3800C24730 /* animal.png in Resources */,
 				2A25501C24F8DF93008A6926 /* AnimalTableViewCell.xib in Resources */,
 				2A7725F024F4AC2100D5F80A /* apimage.jpg in Resources */,
 				2AE4E20124ED01C300633FA8 /* Main.storyboard in Resources */,
